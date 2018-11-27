@@ -1,0 +1,28 @@
+.home-hero {
+  max-width: 440px;
+}
+
+.home-install {
+  text-align: center;
+
+  &-primary {
+    .btn {
+      display: block;
+      text-align: center;
+    }
+
+    .fa {
+      margin-right: 0.5rem;
+      margin-left: -0.3rem;
+    }
+  }
+
+  &-other {
+    a:after {
+      content: ',';
+    }
+    a:last-child:after {
+      display: none;
+    }
+  }
+}

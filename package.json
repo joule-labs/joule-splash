@@ -1,0 +1,17 @@
+{
+  "name": "joule-splash",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Will O'Beirne <wbobeirne@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently -n server,scss 'npm run dev:server' 'npm run dev:scss'",
+    "dev:server": "http-server .",
+    "dev:scss": "node-sass -w scss/style.scss css/style.css"
+  },
+  "dependencies": {
+    "concurrently": "4.1.0",
+    "http-server": "0.11.1",
+    "node-sass": "4.10.0"
+  }
+}
