@@ -26,3 +26,32 @@
     }
   }
 }
+
+.home-screenshots {
+  display: flex;
+  justify-content: space-around;
+}
+
+.home-screenshot {
+  max-height: 240px;
+
+  @include media-breakpoint-up(md) {
+    max-height: 270px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-height: 340px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-height: 420px;
+  }
+}
+
+.media-body {
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: left;
+  }
+}

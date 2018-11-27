@@ -223,6 +223,28 @@ body.is-opera .show-firefox {
   .home-install-other a:last-child:after {
     display: none; }
 
+.home-screenshots {
+  display: flex;
+  justify-content: space-around; }
+
+.home-screenshot {
+  max-height: 240px; }
+  @media (min-width: 768px) {
+    .home-screenshot {
+      max-height: 270px; } }
+  @media (min-width: 992px) {
+    .home-screenshot {
+      max-height: 340px; } }
+  @media (min-width: 1200px) {
+    .home-screenshot {
+      max-height: 420px; } }
+
+.media-body {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .media-body {
+      text-align: left; } }
+
 .faq-question {
   max-width: 800px;
   margin: 0 auto 4rem; }
@@ -647,28 +669,31 @@ header {
 iframe {
   display: block; }
 
-.youtube {
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  overflow: hidden;
-  transition: all 200ms ease-out;
-  cursor: pointer; }
-
-.youtube .play {
+.demo-video {
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 10px 50px 0px rgba(62, 57, 107, 0.3);
   background: #FFF;
-  border-radius: 50%;
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0px 9px 68px 0px rgba(62, 57, 107, 0.2);
-  text-align: center;
-  padding: 17px 20px; }
-  .youtube .play span {
-    color: #7642FF; }
+  overflow: hidden; }
+  .demo-video .play {
+    background: #FFF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 9px 68px 0px rgba(62, 57, 107, 0.2);
+    text-align: center;
+    padding: 17px 20px; }
+    .demo-video .play span {
+      color: #7642FF; }
+  .demo-video video {
+    display: block;
+    width: 100%; }
 
 /*-----------------------------------
  * CLIENT LOGOS
@@ -700,37 +725,32 @@ iframe {
 .browser-window {
   display: inline-block;
   text-align: left;
-  min-height: 200px;
   max-width: 100%;
   border-radius: 5px;
   background-color: #F1F3F5;
   box-shadow: 0 19px 38px rgba(137, 149, 199, 0.15), 0 15px 12px rgba(137, 149, 199, 0.08);
-  margin-bottom: 60px;
   overflow: hidden; }
-  .browser-window.limit-height {
-    max-height: 500px; }
   .browser-window .top-bar {
-    height: 40px;
+    height: 28px;
     border-radius: 5px 5px 0 0;
     border-top: thin solid #F1F3F5;
     border-bottom: thin solid #F1F3F5;
     background: #f8faff;
     width: 100%; }
   .browser-window .circle {
-    height: 13px;
-    width: 13px;
-    margin-right: 5px;
+    height: 10px;
+    width: 10px;
+    margin-right: 4px;
     display: inline-block;
     border-radius: 50%;
     background-color: #fff; }
   .browser-window .circles {
-    margin: 12px 12px; }
+    margin: 1px 10px; }
   .browser-window .content {
     display: inline-block;
     margin: 0;
     border-radius: 0 0 5px 5px;
-    background-color: #fafafa;
-    max-height: 500px; }
+    background-color: #fafafa; }
   .browser-window .content img {
     max-width: 100%;
     height: auto; }

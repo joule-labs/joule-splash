@@ -8,17 +8,20 @@ $(function() {
 
   var browser = 'chrome'; // Default to chrome
   var installUrl = '';
-  if (navigator.userAgent.search("Chrome") >= 0) {
+  if (
+    navigator.userAgent.search("Opera") >= 0 ||
+    navigator.userAgent.search("OPR") >= 0
+  ) {
+    browser = 'opera';
+    installUrl = '#opera';
+  }
+  else if (navigator.userAgent.search("Chrome") >= 0) {
     browser = 'chrome';
     installUrl = '#chrome';
   }
   else if (navigator.userAgent.search("Firefox") >= 0) {
     browser = 'firefox';
     installUrl = '#firefox';
-  }
-  else if (navigator.userAgent.search("Opera") >= 0) {
-    browser = 'opera';
-    installUrl = '#opera';
   }
 
   $('body').removeClass('no-browser');
@@ -30,6 +33,17 @@ $(function() {
 
   var links = $('a[data-install-link]');
   links.attr('href', installUrl);
+
+  /*-----------------------------------
+   * PLAY VIDEO
+   * ----------------------------------*/
+
+  $('.demo-video').on('click', function() {
+    var video = $('.demo-video video');
+    video.get(0).play();
+    video.attr('controls', true);
+    $('.demo-video .play').hide();
+  });
 
   /*-----------------------------------
    * NAVBAR CLOSE ON CLICK
@@ -80,35 +94,6 @@ $(function() {
         }
       }
     });
-
-
-  /*-----------------------------------
-   * YOUTUBE VIDEO
-   *-----------------------------------*/
-  $(".youtube").each(function() {
-    // Based on the YouTube ID, we can easily find the thumbnail image
-    //  $(this).css('background-image', 'url(https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg)');
-    // $(this).css('background-size', 'cover');
-    //$(this).css('background-position', '0 100px');
-
-    // Overlay the Play icon to make it look like a video player
-    //$(this).append($('<div/>', { 'class': 'play' }));
-
-    var videoId = $(this).data('video-id');
-
-    $(document).on('click', '.youtube', function() {
-      // Create an iFrame with autoplay set to true
-      var iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1&rel=0";
-      if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
-
-      // The height and width of the iFrame should be the same as parent
-      var iframe = $('<iframe/>', { 'frameborder': '0', 'class': 'cast-shadow', 'src': iframe_url, 'width': $(this).width(), 'height': $(this).height() })
-
-      // Replace the YouTube thumbnail with YouTube HTML5 Player
-      $(this).replaceWith(iframe);
-    });
-  });
-
 
   /*-----------------------------------
    * Twitter Widget
