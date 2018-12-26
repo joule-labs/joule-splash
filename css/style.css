@@ -207,21 +207,49 @@ body.is-opera .show-chrome,
 body.is-opera .show-firefox {
   display: none !important; }
 
+@keyframes hero-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .home-hero {
-  max-width: 440px; }
+  max-width: 440px;
+  animation: hero-slide-up 500ms ease 1;
+  animation-fill-mode: both;
+  animation-delay: 0ms;
+  animation-duration: 1000ms; }
+  .home-hero-title {
+    animation: hero-slide-up 500ms ease 1;
+    animation-fill-mode: both;
+    animation-delay: 250ms; }
+  .home-hero-description {
+    animation: hero-slide-up 500ms ease 1;
+    animation-fill-mode: both;
+    animation-delay: 300ms; }
 
 .home-install {
   text-align: center; }
-  .home-install-primary .btn {
-    display: block;
-    text-align: center; }
-  .home-install-primary .fa {
-    margin-right: 0.5rem;
-    margin-left: -0.3rem; }
-  .home-install-other a:after {
-    content: ','; }
-  .home-install-other a:last-child:after {
-    display: none; }
+  .home-install-primary {
+    animation: hero-slide-up 500ms ease 1;
+    animation-fill-mode: both;
+    animation-delay: 450ms; }
+    .home-install-primary .btn {
+      display: block;
+      text-align: center; }
+    .home-install-primary .fa {
+      margin-right: 0.5rem;
+      margin-left: -0.3rem; }
+  .home-install-other {
+    animation: hero-slide-up 500ms ease 1;
+    animation-fill-mode: both;
+    animation-delay: 500ms; }
+    .home-install-other a:after {
+      content: ','; }
+    .home-install-other a:last-child:after {
+      display: none; }
 
 .home-screenshots {
   display: flex;

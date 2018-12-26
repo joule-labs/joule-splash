@@ -1,11 +1,41 @@
+@keyframes hero-slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin slide-up($delay) {
+  animation: hero-slide-up 500ms ease 1;
+  animation-fill-mode: both;
+  animation-delay: $delay;
+}
+
+
 .home-hero {
   max-width: 440px;
+  @include slide-up(0ms);
+  animation-duration: 1000ms;
+
+  &-title {
+    @include slide-up(250ms);
+  }
+
+  &-description {
+    @include slide-up(300ms);
+  }
 }
 
 .home-install {
   text-align: center;
 
   &-primary {
+    @include slide-up(450ms);
+
     .btn {
       display: block;
       text-align: center;
@@ -18,6 +48,8 @@
   }
 
   &-other {
+    @include slide-up(500ms);
+
     a:after {
       content: ',';
     }
