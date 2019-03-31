@@ -1,3 +1,6 @@
+@import 'variables';
+@import 'utilities/breakpoints';
+
 @keyframes hero-slide-up {
   0% {
     opacity: 0;
@@ -20,6 +23,11 @@
   max-width: 440px;
   @include slide-up(0ms);
   animation-duration: 1000ms;
+
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    margin: 0 auto;
+  }
 
   &-title {
     @include slide-up(250ms);
@@ -80,7 +88,7 @@
   }
 }
 
-.media-body {
+#features .media-body {
   text-align: center;
 
   @include media-breakpoint-up(md) {

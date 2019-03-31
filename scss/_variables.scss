@@ -32,7 +32,7 @@ $brand-danger: $red;
 $brand-inverse: $gray-dark;
 //
 // Fonts 
-$heading-font: 'Product Sans', Helvetica, Arial, serif;
+$heading-font: Metropolis, Helvetica, Arial, serif;
 $sans-serif-font: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 //
 @mixin _assert-ascending($map, $map-name) {

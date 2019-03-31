@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'fonts';
 @import 'utilities/breakpoints';
 @import 'global';
 @import 'home';
@@ -37,82 +38,6 @@ Surjith S M / @surjithctly
 
 header {
   position: relative;
-}
-
-.gradient-mask {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: -webkit-gradient(linear, left top, right top, from($brand-primary), to($brand-secondary));
-}
-
-
-/*Swiper Slider*/
-
-.swiper-container {
-  width: 100%;
-  height: 850px;
-  height: 100vh;
-  .jumbotron {
-    min-height: auto;
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
-  }
-}
-
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center;
-  &.bg-overlay:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
-}
-
-.bg-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
-  background: url('../images/agency/poster.jpg') no-repeat;
-  background-size: cover;
-  transition: 1s opacity;
-}
-
-.bg-video.align-bottom video {
-  top: auto;
-  bottom: 0;
-  transform: translateX(-50%) translateY(0);
-}
-
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-  left: 30px;
-}
-
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
-  right: 30px;
 }
 
 
@@ -305,7 +230,6 @@ header {
     box-shadow: none;
   }
   &.bg-light {
-    padding: 0.4rem;
     background: #FFF!important;
     box-shadow: 0px 9px 68px 0px rgba(62, 57, 107, 0.1)
   }

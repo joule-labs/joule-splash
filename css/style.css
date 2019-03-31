@@ -1,4 +1,26 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Metropolis';
+  src: url("metropolis-medium-webfont.woff2") format("woff2"), url("metropolis-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("metropolis-light-webfont.woff2") format("woff2"), url("metropolis-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Metropolis';
+  src: url("metropolis-semibold-webfont.woff2") format("woff2"), url("metropolis-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+body,
+html {
+  scroll-behavior: smooth; }
+
 body {
   position: relative;
   color: #3e396b; }
@@ -9,8 +31,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Product Sans", Helvetica, Arial, serif;
+  font-family: Metropolis, Helvetica, Arial, serif;
   line-height: 1.5; }
+
+h2 {
+  font-size: 1.8rem; }
+
+h3 {
+  font-size: 1.5rem; }
 
 a {
   color: #7642FF;
@@ -221,6 +249,10 @@ body.is-opera .show-firefox {
   animation-fill-mode: both;
   animation-delay: 0ms;
   animation-duration: 1000ms; }
+  @media (max-width: 767px) {
+    .home-hero {
+      text-align: center;
+      margin: 0 auto; } }
   .home-hero-title {
     animation: hero-slide-up 500ms ease 1;
     animation-fill-mode: both;
@@ -267,10 +299,10 @@ body.is-opera .show-firefox {
     .home-screenshot {
       max-height: 420px; } }
 
-.media-body {
+#features .media-body {
   text-align: center; }
   @media (min-width: 768px) {
-    .media-body {
+    #features .media-body {
       text-align: left; } }
 
 .faq-question {
@@ -369,69 +401,6 @@ Surjith S M / @surjithctly
 header {
   position: relative; }
 
-.gradient-mask {
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-image: -webkit-gradient(linear, left top, right top, from(#7642FF), to(#4259ff)); }
-
-/*Swiper Slider*/
-.swiper-container {
-  width: 100%;
-  height: 850px;
-  height: 100vh; }
-  .swiper-container .jumbotron {
-    min-height: auto; }
-
-@media (max-width: 767px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none; } }
-
-.parallax-bg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 130%;
-  height: 100%;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: center; }
-  .parallax-bg.bg-overlay:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); }
-
-.bg-video video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translateX(-50%) translateY(-50%);
-  background: url("../images/agency/poster.jpg") no-repeat;
-  background-size: cover;
-  transition: 1s opacity; }
-
-.bg-video.align-bottom video {
-  top: auto;
-  bottom: 0;
-  transform: translateX(-50%) translateY(0); }
-
-.swiper-button-prev,
-.swiper-container-rtl .swiper-button-next {
-  left: 30px; }
-
-.swiper-button-next,
-.swiper-container-rtl .swiper-button-prev {
-  right: 30px; }
-
 /*end swiper css*/
 .jumbotron {
   width: 100%;
@@ -528,7 +497,7 @@ header {
   max-width: 40rem; }
 
 [class^="display"] {
-  font-family: "Product Sans", Helvetica, Arial, serif;
+  font-family: Metropolis, Helvetica, Arial, serif;
   font-weight: 700; }
 
 @media (max-width: 991px) {
@@ -591,7 +560,6 @@ header {
   .navbar .btn {
     box-shadow: none; }
   .navbar.bg-light {
-    padding: 0.4rem;
     background: #FFF !important;
     box-shadow: 0px 9px 68px 0px rgba(62, 57, 107, 0.1); }
 
@@ -847,7 +815,7 @@ iframe {
     letter-spacing: 2px; }
   .pricing .card-title {
     font-size: 65px;
-    font-family: "Product Sans", Helvetica, Arial, serif;
+    font-family: Metropolis, Helvetica, Arial, serif;
     font-weight: 700;
     margin: 10px 0 15px; }
   .pricing .plan-muted {
