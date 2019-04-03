@@ -4,6 +4,7 @@
 @import 'global';
 @import 'home';
 @import 'faq';
+@import 'legal';
 @import 'components/buttons';
 
 /* ------------------------------------------------
@@ -644,6 +645,20 @@ iframe {
   }
   a {
     color: $gray-light;
+    &:hover {
+      text-decoration: none;
+      color: $brand-primary;
+    }
+  }
+}
+
+.footer-legal {
+  margin-top: 0.7rem;
+
+  a {
+    font-size: 0.7rem;
+    color: rgba($gray-light, 0.7);
+    padding: 0 0.5rem;
     &:hover {
       text-decoration: none;
       color: $brand-primary;

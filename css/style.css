@@ -309,6 +309,16 @@ body.is-opera .show-firefox {
   max-width: 800px;
   margin: 0 auto 4rem; }
 
+.legal {
+  max-width: 800px;
+  margin: 0 auto 4rem; }
+  .legal h2 {
+    margin-top: 3rem; }
+  .legal h3 {
+    margin-top: 1.5rem; }
+  .legal ul li {
+    margin-bottom: 0.5rem; }
+
 .btn {
   text-transform: uppercase;
   font-size: 14px;
@@ -876,6 +886,16 @@ iframe {
   .footer-links a {
     color: #636c72; }
     .footer-links a:hover {
+      text-decoration: none;
+      color: #7642FF; }
+
+.footer-legal {
+  margin-top: 0.7rem; }
+  .footer-legal a {
+    font-size: 0.7rem;
+    color: rgba(99, 108, 114, 0.7);
+    padding: 0 0.5rem; }
+    .footer-legal a:hover {
       text-decoration: none;
       color: #7642FF; }
 
