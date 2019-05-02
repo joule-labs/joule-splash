@@ -319,6 +319,16 @@ body.is-opera .show-firefox {
   .legal ul li {
     margin-bottom: 0.5rem; }
 
+.NodeInfo {
+  max-width: 600px;
+  margin: 0 auto; }
+  .NodeInfo-form {
+    margin-bottom: 1rem; }
+    .NodeInfo-form > label {
+      font-weight: bold; }
+    .NodeInfo-form .form-check-input {
+      margin-left: 0; }
+
 .btn {
   text-transform: uppercase;
   font-size: 14px;

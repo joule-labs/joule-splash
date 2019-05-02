@@ -1,0 +1,16 @@
+.NodeInfo {
+  max-width: 600px;
+  margin: 0 auto;
+
+  &-form {
+    margin-bottom: 1rem;
+
+    > label {
+      font-weight: bold;
+    }
+
+    .form-check-input {
+      margin-left: 0;
+    }
+  }
+}
