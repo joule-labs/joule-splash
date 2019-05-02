@@ -168,7 +168,16 @@
         </div>
       </div>
       <div class="NodeInfo-info">
-        <p class="NodeInfo-info-message alert alert-warning" />
+        <p class="NodeInfo-info-message alert alert-warning d-none" />
+        <div class="form-group">
+          <label>
+            Data directory
+          </label>
+          <input class="form-control" name="data-dir" disabled/>
+          <small class="form-text text-muted">
+            You can find the TLS cert and macaroons in here
+          </small>
+        </div>
         <div class="form-group">
           <label>
             Default port (REST)
@@ -180,15 +189,6 @@
             Default port (gRPC)
           </label>
           <input class="form-control" name="grpc-port" disabled/>
-        </div>
-        <div class="form-group">
-          <label>
-            Data directory
-          </label>
-          <input class="form-control" name="data-dir" disabled/>
-          <small class="form-text text-muted">
-            You can find the TLS cert and macaroons in here
-          </small>
         </div>
       </div>
 
